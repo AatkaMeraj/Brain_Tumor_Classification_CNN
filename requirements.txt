@@ -1,5 +1,7 @@
+tensorflow
 streamlit
-tensorflow>=2.15,<2.19
 pillow
 numpy
 matplotlib
+plotly
+gdown
