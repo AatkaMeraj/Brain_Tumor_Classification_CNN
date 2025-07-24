@@ -5,13 +5,18 @@ import numpy as np
 from PIL import Image
 import plotly.graph_objects as go
 import time
+import gdown
 
 # ---------- Configuration ----------
 st.set_page_config(page_title="🧠 Brain Tumor Classifier", layout="centered")
 
 # Load the model
-MODEL_PATH = r'C:\Users\aatka\Downloads\brain_tumor_model_vgg16.keras'
-model = load_model(MODEL_PATH, compile=False)
+
+url = 'https://drive.google.com/uc?id=1LPzYH-wcEkMg_AIYHJU-gTbMgEYFvW-7'
+output = 'brain_tumor_model_vgg16.keras'
+gdown.download(url, output, quiet=False)
+
+model = load_model(output, compile=False)
 
 # Class labels
 class_labels = ['glioma', 'meningioma', 'no_tumor', 'pituitary']
