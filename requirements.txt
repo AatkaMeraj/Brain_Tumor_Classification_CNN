@@ -1,4 +1,6 @@
-tensorflow
+tensorflow==2.12.0
+streamlit
+pillow
 numpy
-Pillow
-plotly
+matplotlib
+
